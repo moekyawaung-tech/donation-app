@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 8px;
+}
+
+.donation-box {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.amount-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.amount-btn {
+    padding: 15px 10px;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.amount-btn.active {
+    background: #fff;
+    color: #667eea;
+    border-color: gold;
+    font-weight: bold;
+}
+
+#customAmount {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.payment-methods h3 {
+    margin: 20px 0 15px;
+}
+
+.method-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.method {
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.method.active {
+    background: gold;
+    color: #333;
+    font-weight: bold;
+}
+
+.donate-btn {
+    width: 100%;
+    padding: 18px;
+    margin-top: 25px;
+    background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255,107,107,0.4);
+}
+
+.qr-section, .receipt {
+    margin-top: 30px;
+    background: rgba(255,255,255,0.95);
+    color: #333;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#qrCanvas {
+    margin: 20px auto;
+    padding: 15px;
+    background: white;
+    border-radius: 15px;
+}
