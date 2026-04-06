@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💳 Donation App - moekyawaung-tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💝 Donation App</h1>
+            <p>moekyawaung-tech ကို ပံ့ပိုးပါ</p>
+        </header>
+
+        <div class="donation-box">
+            <h2>လှူဒါန်းပမာဏ</h2>
+            
+            <div class="amount-grid">
+                <button class="amount-btn active" data-amount="1000">1,000 ကျပ်</button>
+                <button class="amount-btn" data-amount="5000">5,000 ကျပ်</button>
+                <button class="amount-btn" data-amount="10000">10,000 ကျပ်</button>
+                <button class="amount-btn" data-amount="20000">20,000 ကျပ်</button>
+                <button class="amount-btn" data-amount="50000">50,000 ကျပ်</button>
+                <button class="amount-btn" data-amount="100000">100,000 ကျပ်</button>
+            </div>
+
+            <input type="number" id="customAmount" placeholder="စိတ်ကြိုက်ပမာဏ ရိုက်ထည့်ပါ (ကျပ်)" />
+
+            <div class="payment-methods">
+                <h3>ငွေပေးချေမည့်နည်းလမ်း</h3>
+                <div class="method-options">
+                    <label class="method active" data-method="kbz">
+                        <span>KBZ Pay</span>
+                    </label>
+                    <label class="method" data-method="wave">
+                        <span>Wave Money</span>
+                    </label>
+                    <label class="method" data-method="aya">
+                        <span>AYA Pay</span>
+                    </label>
+                </div>
+            </div>
+
+            <button id="donateBtn" class="donate-btn">လှူဒါန်းမည် 💳</button>
+        </div>
+
+        <div id="qrSection" class="qr-section" style="display: none;">
+            <h3>QR Code ဖတ်ပြီး ငွေလွှဲပါ</h3>
+            <canvas id="qrCanvas"></canvas>
+            <p id="qrInfo" class="qr-info"></p>
+            <button id="newDonation">နောက်တစ်ခါ လှူမယ်</button>
+        </div>
+
+        <div id="receiptSection" class="receipt" style="display: none;">
+            <h3>✅ လှူဒါန်းမှု အောင်မြင်ပါပြီ</h3>
+            <div id="receiptContent"></div>
+            <button onclick="printReceipt()">🖨️ PDF ထုတ်ရန်</button>
+            <button onclick="shareReceipt()">📤 မျှဝေရန်</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
